@@ -58,7 +58,7 @@ async def classify_and_save_poem(request: PoemRequest):
         "confidence": confidence
     })
 
-
+"""
 # 2. Endpoint to calculate SHAP tokens using poem ID and update DB
 @classify_router.post("/calculate_shap/")
 async def calculate_shap(poem_id: str):
@@ -103,7 +103,7 @@ async def calculate_shap(poem_id: str):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
+"""
 @classify_router.get("/history/")
 async def get_user_history(user_id: str):
     try:
